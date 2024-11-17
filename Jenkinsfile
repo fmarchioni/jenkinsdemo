@@ -1,12 +1,10 @@
 pipeline {
     agent any
-    parameters {
-        string(name: 'GIT_URL', defaultValue: 'https://github.com/fmarchioni/jenkinsdemo', description: 'Git repository URL')
-    }
+
     stages {
         stage('Checkout') {
             steps {
-                 echo "Cloning repository"
+                 sh 'ls -al'
             }
         }
         stage('Test') {
